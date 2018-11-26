@@ -74,13 +74,13 @@ def minus():
 
 
 def times():
-    times = answer.get()
-    answer.set(times + "*")
+    time = answer.get()
+    answer.set(time + "*")
 
 
 def divide():
-    divide = answer.get()
-    answer.set(divide + "/")
+    divides = answer.get()
+    answer.set(divides + "/")
 
 
 def equal():
@@ -96,6 +96,16 @@ def AC():
 def dots():
     dot = answer.get()
     answer.set(dot + ".")
+
+
+def square():
+    squares = answer.get()
+    answer.set(int(squares) * int(squares))
+
+
+def triple():
+    triples = answer.get()
+    answer.set(int(triples) * int(triples) * int(triples))
 
 
 answer = tkinter.StringVar()
@@ -153,5 +163,11 @@ Label_minus.grid(row=4, column=4)
 
 Label_dots = tkinter.Button(root, text="    .   ", command=dots)
 Label_dots.grid(row=7, column=3)
+
+Label_square = tkinter.Button(root, text="  ^2  ", command=square)
+Label_square.grid(row=3, column=2)
+
+Label_triple = tkinter.Button(root, text="  ^3  ", command=triple)
+Label_triple.grid(row=3, column=3)
 
 root.mainloop()
